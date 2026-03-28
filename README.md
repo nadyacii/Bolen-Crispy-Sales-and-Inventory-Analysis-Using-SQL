@@ -107,10 +107,7 @@ Ditemukan adanya perbedaan signifikan antara produk terlaris (best-selling) dan 
 Penjualan menunjukkan variasi berdasarkan hari dalam seminggu. Selain itu, terdapat perbedaan performa antara weekday dan weekend, yang dapat dimanfaatkan untuk menentukan strategi pemasaran dan operasional.
 
 ## 7. Dashboard
- ![Dashboard_Bolen](dashboard/Bolen_Crispy_Sales_Dashboard.pdf)
-
-
-[View Dashboard (PDF)](Bolen_Crispy_Sales_Dashboard.pdf)
+ ![Dashboard_Bolen](dashboard/Bolen_Crispy_Sales_Dashboard.jpg)
 
 ## 8. Business Recomendation
 
