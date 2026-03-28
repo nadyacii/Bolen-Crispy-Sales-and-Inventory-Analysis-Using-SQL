@@ -42,7 +42,7 @@ Adapun kolompada dataset awal meliputi:
 ## 5. Data Analysis Process
 Pada project ini, proses analisis data dilakukan menggunakan SQL untuk mengolah dataset menjadi insight yang informatif dan siap divisualisasikan dalam dashboard. Tahapan analisis yang dilakukan meliputi:
 
-1. Data Aggregation & Exploration
+### 1. Data Aggregation & Exploration
 
 Melakukan agregasi data untuk memahami gambaran umum performa penjualan, hal ini bertujuan untuk mengetahui produk mana yang paling berkontribusi terhadap bisnis.
 
@@ -50,7 +50,7 @@ Melakukan agregasi data untuk memahami gambaran umum performa penjualan, hal ini
 - Penjualan dan revenue per produk
 - Rata-rata penjualan harian per produk
 
-2. Time Series Analysis
+### 2. Time Series Analysis
 
 Melakukan analisis berbasis waktu untuk mengidentifikasi pola dan tren penjualan, meliputi:
 
@@ -58,7 +58,7 @@ Melakukan analisis berbasis waktu untuk mengidentifikasi pola dan tren penjualan
 - Tren revenue harian (daily revenue trend)
 - Tren penjualan tahunan (yearly sales trend)
 
-3. Product Performance Analysis
+### 3. Product Performance Analysis
 
 Menganalisis performa masing-masing produk untuk mendukung pengambilan keputusan bisnis. Insight dari analisis ini dapat digunakan untuk strategi promosi dan pengelolaan produk.
 
@@ -66,14 +66,14 @@ Menganalisis performa masing-masing produk untuk mendukung pengambilan keputusan
 - Produk dengan penjualan terendah (slow-moving products)
 - Performa produk berdasarkan hari (top-selling products by day)
 
-4. Sales Pattern Analysis
+### 4. Sales Pattern Analysis
 
 Mengidentifikasi pola perilaku penjualan berdasarkan waktu. Analisis ini membantu bisnis dalam menentukan strategi operasional dan promosi pada waktu tertentu.
 
 - Penjualan berdasarkan hari dalam seminggu
 - Perbandingan penjualan antara weekday dan weekend
 
-5. Feature Engineering & Stock Analysis
+### 5. Feature Engineering & Stock Analysis
 
 Melakukan transformasi data dengan membuat kolom turunan untuk analisis inventori:
 
@@ -85,30 +85,93 @@ Melakukan transformasi data dengan membuat kolom turunan untuk analisis inventor
 
 Proses ini menggunakan logika CASE WHEN dalam SQL dan bertujuan untuk mengevaluasi efisiensi pengelolaan stok serta mengidentifikasi potensi risiko dalam inventori.
 
-## 6. Key Analysis (SQL Highlight)
-Berdasarkan hasil analisis menggunakan SQL, diperoleh beberapa insight utama yang dapat membantu dalam memahami performa penjualan serta pengelolaan stok pada bisnis Bolén Crispy:
+## 6. Key Analysis
 
-1. Tren Penjualan dan Revenue
+### 1. Best-Selling Products
+- Top 3 Best-Selling Products adalag Bolen Proltape, Bolen Coklat Keju, dan Bolen Pisang Coklat. Bolen Proltape merupakan produk dengan penjualan tertinggi (13.239 unit) sekaligus penyumbang revenue terbesar (Rp304.497.000).
 
-Analisis menunjukkan adanya fluktuasi penjualan harian yang berdampak langsung pada revenue. Dengan memahami pola ini, bisnis dapat mengantisipasi periode dengan permintaan tinggi maupun rendah.
+### 2. Slow-Moving Products
+- Bolen Coklat memiliki penjualan terendah (11.791 unit), meskipun selisihnya tidak terlalu signifikan dengan produk lainnya.
 
-2. Kontribusi Produk terhadap Revenue
+### 3. Yearly Sales Trend (Growth)
+- Terjadi peningkatan signifikan dari 2021 (12.303 unit) ke 2022 (29.903 unit) (~140% growth)
+- Penjualan mencapai titik tertinggi pada 2023 (30.309 unit)
+- Pada 2024 tercatat 16.697 unit, yang menunjukkan kemungkinan penurunan jika merupakan data full-year
 
-Tidak semua produk memberikan kontribusi yang sama terhadap total revenue. Beberapa produk menjadi penyumbang utama penjualan, sehingga perlu diprioritaskan dalam strategi bisnis seperti promosi dan pengelolaan stok.
-
-3. Identifikasi Produk Terlaris dan Slow Moving
-
-Ditemukan adanya perbedaan signifikan antara produk terlaris (best-selling) dan produk dengan penjualan rendah (slow-moving).
-
-- Produk terlaris berpotensi untuk ditingkatkan produksinya
-- Produk slow-moving perlu dievaluasi, baik dari segi harga, promosi, maupun keberlanjutannya
-4. Pola Penjualan Berdasarkan Hari
-
-Penjualan menunjukkan variasi berdasarkan hari dalam seminggu. Selain itu, terdapat perbedaan performa antara weekday dan weekend, yang dapat dimanfaatkan untuk menentukan strategi pemasaran dan operasional.
+### 4. Sales Pattern by Day
+- Penjualan weekday (64.466 unit) jauh lebih tinggi dibandingkan weekend (24.746 unit)
+- Setiap hari memiliki produk unggulan berbeda:
+  - Senin → Bolen Banana
+  - Selasa → Bolen Proltape
+  - Rabu → Bolen Coklat Keju
+  - Kamis → Bolen Cokju (Mini)
+  - Jumat → Bolen Keju (Mini)
+  - Sabtu → Bolen Pisang Coklat
+  - Minggu → Bolen Coklat
 
 ## 7. Dashboard
  ![Dashboard_Bolen](dashboard/Bolen_Crispy_Sales_Dashboard.jpg)
 
 ## 8. Business Recomendation
+### 1. Fokus pada Produk “Best-Selling”
+
+Insight:
+
+Bolen Proltape adalah produk terbanyak dari sisi penjualan dan revenue
+
+Recommendation:
+
+- Prioritaskan produksi dan ketersediaan stok
+- Jadikan sebagai produk utama dalam promosi
+- Pertimbangkan bundling dengan produk lain untuk meningkatkan penjualan cross-product
+
+### 2. Optimasi Produk Slow-Moving
+
+Insight:
+
+Bolen Coklat memiliki penjualan terendah dibanding produk lainnya
+
+Recommendation:
+
+- Lakukan evaluasi harga atau strategi promosi
+- Pertimbangkan inovasi (varian rasa baru atau packaging)
+- Gunakan diskon atau bundling untuk meningkatkan demand
+
+### 3. Antisipasi Penurunan Penjualan
+
+Insight:
+
+Penjualan menunjukkan potensi penurunan di tahun 2024 setelah puncak penjualan di 2023
+
+Recommendation:
+
+- Analisis faktor eksternal seperti seasonality, kompetitor, dll.
+- Tingkatkan marketing penjualan
+- Gunakan data historis untuk forecasting dan perencanaan strategi
+
+### 4. Maksimalkan Potensi Weekday Sales
+
+Insight:
+
+Mayoritas penjualan terjadi pada hari kerja (weekday)
+
+Recommendation:
+
+- Fokuskan promosi pada segmen pekerja/kantor
+- Buat campaign seperti “weekday deals” atau “office snack package”
+- Optimalkan distribusi stok pada hari kerja
+
+  
+### 5. Strategi Berdasarkan Pola Harian
+
+Insight:
+
+Setiap hari memiliki produk unggulan berbeda
+
+Recommendation:
+
+- Buat promo spesifik per hari (daily promotion strategy)
+- Sesuaikan stok berdasarkan pola permintaan harian
+- Gunakan insight ini untuk campaign marketing yang lebih targeted
 
 
