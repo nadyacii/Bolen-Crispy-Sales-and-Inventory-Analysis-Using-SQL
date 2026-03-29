@@ -1,6 +1,9 @@
 # Bolen Crispy Sales and Inventory Analysis Using SQL
 This is a Data Analyst project focused on analyzing sales performance and inventory management using SQL and dashboard visualization.
 
+ ![Dashboard_Bolen](dashboard/Bolen_Crispy_Sales_Dashboard.jpg)
+ 
+
 ## 1. Background
 Bisnis Bolen Crispy merupakan usaha di bidang makanan yang menjual berbagai varian produk bolen kepada pelanggan. Seiring dengan meningkatnya transaksi penjualan, diperlukan analisis data yang tepat untuk memahami performa bisnis secara menyeluruh. Saat ini, data penjualan yang tersedia masih berupa data mentah (raw data) dan belum dimanfaatkan secara maksimal untuk menghasilkan insight yang dapat membantu pengambilan keputusan. Hal ini dapat menyebabkan beberapa permasalahan, seperti:
 
@@ -110,7 +113,8 @@ Proses ini menggunakan logika CASE WHEN dalam SQL dan bertujuan untuk mengevalua
   - Minggu → Bolen Coklat
 
 ## 7. Dashboard
- ![Dashboard_Bolen](dashboard/Bolen_Crispy_Sales_Dashboard.jpg)
+https://lookerstudio.google.com/reporting/727c398c-14aa-4948-932d-dc5db2d28176
+
 
 ## 8. Business Recomendation
 ### 1. Fokus pada Produk “Best-Selling”
